@@ -1,0 +1,77 @@
+const express = require('express');
+const app = express();
+const fs = require('fs');
+const cors = require('cors');
+
+app.use(cors());
+app.use(express.json());
+
+const champions = JSON.parse(fs.readFileSync('./champions.json'));
+
+// Funkcja do deterministycznego wyboru championa na podstawie daty
+function getChampionOfTheDay(dateStr) {
+  // Zamiana daty na liczbę (np. suma kodów znaków)
+  const seed = [...dateStr].reduce((acc, char) => acc + char.charCodeAt(0), 0);
+  
+  // Wybierz index na podstawie seeda
+  const index = seed % champions.length;
+  return champions[index];
+}
+
+app.get('/champion-of-the-day', (req, res) => {
+  const today = new Date();
+  const dateStr = today.toISOString().slice(0,10); // "YYYY-MM-DD"
+  const championOfTheDay = getChampionOfTheDay(dateStr);
+
+  // Wysyłamy np. tylko nazwę i inne dane (nie wszystko)
+  res.json({
+    name: championOfTheDay.name,
+    race: championOfTheDay.race,
+    type: championOfTheDay.type,
+    faction: championOfTheDay.faction,
+    cost: championOfTheDay.cost,
+    cp: championOfTheDay.cp
+  });
+});
+
+app.post('/guess', (req, res) => {
+  const today = new Date();
+  const dateStr = today.toISOString().slice(0,10);
+  const championOfTheDay = getChampionOfTheDay(dateStr);
+
+  const guessName = req.body.name.toLowerCase();
+  const guessedChampion = champions.find(champ => champ.name.toLowerCase() === guessName);
+
+  if (!guessedChampion) {
+    return res.status(404).json({ error: 'Champion not found' });
+  }
+
+const comparison = {
+  guessedName: guessedChampion.name,
+  name: guessedChampion.name === championOfTheDay.name,
+  race: guessedChampion.race === championOfTheDay.race,
+  type: guessedChampion.type === championOfTheDay.type,
+  faction: guessedChampion.faction === championOfTheDay.faction,
+  cost: guessedChampion.cost === championOfTheDay.cost,
+  cp: guessedChampion.cp === championOfTheDay.cp,
+  costHint: null,
+  cpHint: null
+};
+
+  //Podpowiedź czy więcej czy mniej
+if (!comparison.cost) {
+  comparison.costHint = championOfTheDay.cost > guessedChampion.cost ? "up" : "down";
+}
+if (!comparison.cp) {
+  comparison.cpHint = championOfTheDay.cp > guessedChampion.cp ? "up" : "down";
+}
+
+  res.json(comparison);
+});
+
+app.get('/champions', (req, res) => {
+  const names = champions.map(champ => champ.name);
+  res.json(names);
+});
+
+app.listen(3000, () => console.log('Server running on port 3000'));

@@ -1,0 +1,194 @@
+[
+  {
+    "name": "Grey Company",
+    "race": "Men",
+    "type": "Heroic",
+    "faction": "Rivendell",
+    "cost": 1500,
+    "cp": 120
+  },
+    {
+    "name": "Glorfindel",
+    "race": "Elf",
+    "type": "Hero",
+    "faction": "Rivendell",
+    "cost": 3800,
+    "cp": 0
+  },
+    {
+    "name": "Elrond",
+    "race": "Half-elf",
+    "type": "Hero",
+    "faction": "Rivendell",
+    "cost": 4000,
+    "cp": 0
+  },
+    {
+    "name": "Aragorn (Strider)",
+    "race": "Men",
+    "type": "Hero",
+    "faction": "Rivendell",
+    "cost": 2800,
+    "cp": 0
+  },
+    {
+    "name": "Arwen Undómiel",
+    "race": "Half-elf",
+    "type": "Hero",
+    "faction": "Rivendell",
+    "cost": 1000,
+    "cp": 0
+  },
+    {
+    "name": "Elrohir",
+    "race": "Half-elf",
+    "type": "Hero",
+    "faction": "Rivendell",
+    "cost": 1200,
+    "cp": 0
+  },
+    {
+    "name": "Elladan",
+    "race": "Half-elf",
+    "type": "Hero",
+    "faction": "Rivendell",
+    "cost": 1200,
+    "cp": 0
+  },
+    {
+    "name": "Halbarad",
+    "race": "Men",
+    "type": "Hero",
+    "faction": "Rivendell",
+    "cost": 1300,
+    "cp": 0
+  },
+    {
+    "name": "Gildor Inglorion",
+    "race": "Elf",
+    "type": "Hero",
+    "faction": "Rivendell",
+    "cost": 1200,
+    "cp": 0
+  },
+    {
+    "name": "Fredegar Bolger",
+    "race": "Hobbit",
+    "type": "Hero",
+    "faction": "Rivendell",
+    "cost": 200,
+    "cp": 0
+  },
+  {
+    "name": "Farmer Maggot",
+    "race": "Hobbit",
+    "type": "Hero",
+    "faction": "Rivendell",
+    "cost": 200,
+    "cp": 0
+  },    
+    {
+    "name": "Bounders",
+    "race": "Hobbit",
+    "type": "Swordsmen",
+    "faction": "Rivendell",
+    "cost": 175,
+    "cp": 48
+  }, 
+  {
+    "name": "Took Archers",
+    "race": "Hobbit",
+    "type": "Archers",
+    "faction": "Rivendell",
+    "cost": 200,
+    "cp": 40
+  },  
+  {
+    "name": "Bree-land Townsguard",
+    "race": "Men",
+    "type": "Pikemen",
+    "faction": "Rivendell",
+    "cost": 300,
+    "cp": 60
+  },  
+  {
+    "name": "Battering Ram",
+    "race": "Men",
+    "type": "Siege",
+    "faction": "Rivendell",
+    "cost": 300,
+    "cp": 30
+  },  
+  {
+    "name": "Dúnedain Rangers",
+    "race": "Men",
+    "type": "Archers",
+    "faction": "Rivendell",
+    "cost": 500,
+    "cp": 72
+  },  
+  {
+    "name": "Dúnedain Outriders",
+    "race": "Men",
+    "type": "Cavalry",
+    "faction": "Rivendell",
+    "cost": 650,
+    "cp": 80
+  },  
+  {
+    "name": "Rivendell Guardsmen",
+    "race": "Elf",
+    "type": "Swordsmen",
+    "faction": "Rivendell",
+    "cost": 750,
+    "cp": 80
+  },  
+  {
+    "name": "Rivendell Glaivesmen",
+    "race": "Elf",
+    "type": "Pikemen",
+    "faction": "Rivendell",
+    "cost": 700,
+    "cp": 80
+  },  
+  {
+    "name": "Rivendell Archers",
+    "race": "Elf",
+    "type": "Archers",
+    "faction": "Rivendell",
+    "cost": 750,
+    "cp": 80
+  },  
+  {
+    "name": "Knights of Rivendell",
+    "race": "Elf",
+    "type": "Cavalry",
+    "faction": "Rivendell",
+    "cost": 1200,
+    "cp": 100
+  },  
+  {
+    "name": "Veterans of the Last Alliance",
+    "race": "Elf",
+    "type": "Heroic",
+    "faction": "Rivendell",
+    "cost": 2500,
+    "cp": 120
+  },  
+  {
+    "name": "Rivendell Revelers",
+    "race": "Elf",
+    "type": "Special",
+    "faction": "Rivendell",
+    "cost": 500,
+    "cp": 30
+  },   
+    {
+    "name": "Armoured Castellan",
+    "race": "Wraith",
+    "type": "Heroic",
+    "faction": "Dol Guldur",
+    "cost": 1000,
+    "cp": 45
+  }
+]

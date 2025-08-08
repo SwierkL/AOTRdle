@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>AOTRdle Classic</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>AOTRdle Classic</h1>
+<div class="input-container" style="position: relative;">
+  <input type="text" id="guessInput" placeholder="Guess unit...">
+  <button onclick="submitGuess()">Guess</button>
+</div>
+<div id="fireworks-container" style="pointer-events:none; position:fixed; top:0; left:0; width:100vw; height:100vh; z-index:9999; display:none;"></div>
+
+
+  <div id="history">
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th class="tooltip"data-tooltip="Possible: Men, Elf, Half-Elf, Wraith">Race</th>
+          <th class="tooltip"data-tooltip="Possible: Hero, Heroic, Special, Swordsmen, Archers, Pikemen, Siege, Cavalry">Type</th>
+          <th class="tooltip"data-tooltip="Possible: Rivendell, Dol Guldur">Faction</th>
+          <th class="tooltip"data-tooltip="Cost in resources">Cost</th>
+          <th class="tooltip"data-tooltip="Cost in Command Points">CP</th>
+        </tr>
+      </thead>
+      <tbody id="historyBody"></tbody>
+    </table>
+  </div>
+  
+
+  <script src="script.js"></script>
+</body>
+</html>
