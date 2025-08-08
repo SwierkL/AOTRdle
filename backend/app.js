@@ -6,6 +6,9 @@ const cors = require('cors');
 app.use(cors());
 app.use(express.json());
 
+const path = require('path');
+app.use(express.static(path.join(__dirname, '../frontend')));
+
 const champions = JSON.parse(fs.readFileSync('./champions.json'));
 
 // Funkcja do deterministycznego wyboru championa na podstawie daty
@@ -79,4 +82,10 @@ app.get('/champions', (req, res) => {
   res.json(names);
 });
 
-app.listen(3000, () => console.log('Server running on port 3000'));
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../frontend/index.html'));
+});
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
