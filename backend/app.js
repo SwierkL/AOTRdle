@@ -15,10 +15,12 @@ const champions = JSON.parse(fs.readFileSync('./champions.json'));
 function getChampionOfTheDay(dateStr) {
   // Zamiana daty na liczbę (np. suma kodów znaków)
   const seed = [...dateStr].reduce((acc, char) => acc + char.charCodeAt(0), 0);
-  
-  // Wybierz index na podstawie seeda
   const index = seed % champions.length;
-  return champions[index];
+  // Wybierz index na podstawie seeda
+  const selectedChampion = champions[index];
+
+  console.log(`[${dateStr}] Wylosowany champion dnia: ${selectedChampion.name} (index: ${index})`);
+    return selectedChampion;
 }
 
 app.get('/champion-of-the-day', (req, res) => {
@@ -73,7 +75,6 @@ if (!comparison.cost) {
 if (!comparison.cp) {
   comparison.cpHint = championOfTheDay.cp > guessedChampion.cp ? "up" : "down";
 }
-
   res.json(comparison);
 });
 
