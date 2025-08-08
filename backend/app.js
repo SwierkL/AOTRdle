@@ -49,10 +49,15 @@ app.post('/guess', (req, res) => {
 const comparison = {
   guessedName: guessedChampion.name,
   name: guessedChampion.name === championOfTheDay.name,
+  guessedRace: guessedChampion.race,
   race: guessedChampion.race === championOfTheDay.race,
+  guessedType: guessedChampion.type,
   type: guessedChampion.type === championOfTheDay.type,
+  guessedFaction: guessedChampion.faction,
   faction: guessedChampion.faction === championOfTheDay.faction,
+  guessedCost: guessedChampion.cost,
   cost: guessedChampion.cost === championOfTheDay.cost,
+  guessedCp: guessedChampion.cp,
   cp: guessedChampion.cp === championOfTheDay.cp,
   costHint: null,
   cpHint: null
