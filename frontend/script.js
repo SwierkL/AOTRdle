@@ -9,7 +9,7 @@ inputElement.parentNode.appendChild(suggestionBox);
 let championNames = [];
 let guessedChampions = []; 
 
-fetch('/champions')
+fetch('http://localhost:3000/champions')
   .then(res => res.json())
   .then(data => championNames = data)
   .catch(err => console.error("Błąd pobierania championów:", err));
@@ -52,7 +52,7 @@ async function submitGuess() {
   const guess = inputElement.value.trim();
   if (!guess) return;
 
-  const response = await fetch('/guess', {
+  const response = await fetch('http://localhost:3000/guess', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ name: guess })
