@@ -67,7 +67,6 @@ async function submitGuess() {
 
   // Historia
   const row = document.createElement("tr");
-const checkIcon = (ok) => ok ? '✅' : '❌';
 function arrowIcon(direction) {
   if (direction === "up") return '🔼';
   if (direction === "down") return '🔽';
@@ -76,15 +75,15 @@ function arrowIcon(direction) {
 
 row.innerHTML = `
   <td class="${data.name ? 'correct' : 'incorrect'}">${data.guessedName}</td>
-  <td>${checkIcon(data.race)}</td>
-  <td>${checkIcon(data.type)}</td>
-  <td>${checkIcon(data.faction)}</td>
-  <td>
-    ${checkIcon(data.cost)} 
+  <td class="${data.race ? 'correct' : 'incorrect'}">${data.guessedRace}</td>
+  <td class="${data.type ? 'correct' : 'incorrect'}">${data.guessedType}</td>
+  <td class="${data.faction ? 'correct' : 'incorrect'}">${data.guessedFaction}</td>
+  <td class="${data.cost ? 'correct' : 'incorrect'}">
+    ${data.guessedCost}
     ${data.costHint ? `<span style="color:#ffa500; margin-left:5px;">${arrowIcon(data.costHint)}</span>` : ''}
   </td>
-  <td>
-    ${checkIcon(data.cp)} 
+  <td class="${data.cp ? 'correct' : 'incorrect'}">
+    ${data.guessedCp}
     ${data.cpHint ? `<span style="color:#ffa500; margin-left:5px;">${arrowIcon(data.cpHint)}</span>` : ''}
   </td>
 `;
@@ -148,4 +147,4 @@ function showFireworks() {
 }
 
 
-// node app.js <--start
+// ./backend/ ----  node app.js <--start
