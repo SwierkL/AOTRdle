@@ -61,7 +61,7 @@ async function submitGuess() {
   });
 
   if (!response.ok) {
-    alert("Nie znaleziono championa!");
+    alert("Unit not found!");
     return;
   }
 
