@@ -2,11 +2,11 @@ const express = require('express');
 const app = express();
 const fs = require('fs');
 const cors = require('cors');
+const path = require('path');
 
 app.use(cors());
 app.use(express.json());
 
-const path = require('path');
 app.use(express.static(path.join(__dirname, '../frontend')));
 
 const champions = JSON.parse(fs.readFileSync('./champions.json'));
@@ -82,9 +82,10 @@ app.get('/champions', (req, res) => {
   res.json(names);
 });
 
-app.get('*', (req, res) => {
+app.get(/(.*)/, (req, res) => {
   res.sendFile(path.join(__dirname, '../frontend/index.html'));
 });
+
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
