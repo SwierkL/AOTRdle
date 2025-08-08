@@ -8,6 +8,8 @@ inputElement.parentNode.appendChild(suggestionBox);
 
 let championNames = [];
 let guessedChampions = []; 
+let totalAttempts = 0;
+let hasWon = false;
 
 fetch('http://localhost:3000/champions')
   .then(res => res.json())
@@ -98,10 +100,30 @@ row.innerHTML = `
 
   inputElement.value = "";
 
-    const allCorrect = data.name && data.race && data.type && data.faction && data.cost && data.cp;
-  if (allCorrect) {
-    showFireworks();
-  }
+totalAttempts++;
+
+const attemptsElem = document.getElementById("attempts");
+const statusElem = document.getElementById("status");
+
+attemptsElem.textContent = totalAttempts;
+
+const allCorrect = data.name && data.race && data.type && data.faction && data.cost && data.cp;
+if (allCorrect) {
+  hasWon = true;
+  statusElem.textContent = `🎉 Brawo! Zgadłeś po ${totalAttempts} próbach.`;
+  showFireworks();
+
+    // Zablokuj input i przycisk po zwycięstwie
+  inputElement.disabled = true;
+  const guessButton = document.querySelector('button[onclick="submitGuess()"]');
+  if (guessButton) guessButton.disabled = true;
+
+  // Możesz też zmienić placeholder inputu, żeby było bardziej czytelnie
+  inputElement.placeholder = "✅ Zgadłeś poprawnie!";
+} else {
+  statusElem.textContent = `Jeszcze nie zgadłeś!`;
+}
+
 }
 function showFireworks() {
   const container = document.getElementById('fireworks-container');

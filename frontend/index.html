@@ -2,7 +2,7 @@
 <html lang="pl">
 <head>
   <meta charset="UTF-8">
-  <title>AOTRdle Classic</title>
+  <title>AOTRdle</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -11,6 +11,11 @@
   <input type="text" id="guessInput" placeholder="Guess unit...">
   <button onclick="submitGuess()">Guess</button>
 </div>
+<div id="summary" class="summary-panel">
+  <p>Liczba prób: <span id="attempts">0</span></p>
+  <p>Status: <span id="status">Jeszcze nie zgadłeś!</span></p>
+</div>
+
 <div id="fireworks-container" style="pointer-events:none; position:fixed; top:0; left:0; width:100vw; height:100vh; z-index:9999; display:none;"></div>
 
 

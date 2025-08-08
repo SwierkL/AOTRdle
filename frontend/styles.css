@@ -7,7 +7,9 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #0a0a0a;
+  background-image: url('background.jpg');
+  background-attachment: fixed;
+  background-position: center;
   color: #ffffff;
   padding: 20px;
   display: flex;
@@ -193,6 +195,18 @@ tr:nth-child(even) td {
 .tooltip:hover::after {
   opacity: 1;
 }
-/* */
+/* Podsumowanie */
+.summary-panel {
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #444;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: fit-content;
+}
+
+.summary-panel span {
+  font-weight: bold;
+}
 
 
