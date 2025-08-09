@@ -111,7 +111,7 @@ attemptsElem.textContent = totalAttempts;
 const allCorrect = data.name && data.race && data.type && data.faction && data.cost && data.cp;
 if (allCorrect) {
   hasWon = true;
-  statusElem.textContent = `🎉 Brawo! Zgadłeś po ${totalAttempts} próbach.`;
+  statusElem.textContent = `🎉 Well done! You guessed it after ${totalAttempts} attempts.`;
   showFireworks();
 
     // Zablokuj input i przycisk po zwycięstwie
@@ -120,9 +120,9 @@ if (allCorrect) {
   if (guessButton) guessButton.disabled = true;
 
   // Możesz też zmienić placeholder inputu, żeby było bardziej czytelnie
-  inputElement.placeholder = "✅ Zgadłeś poprawnie!";
+  inputElement.placeholder = "✅ You guessed correctly!";
 } else {
-  statusElem.textContent = `Jeszcze nie zgadłeś!`;
+  statusElem.textContent = `You haven't guessed yet!`;
 }
 
 }
