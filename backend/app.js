@@ -71,26 +71,21 @@ const comparison = {
 };
 
   //Podpowiedź czy więcej czy mniej
-if (!comparison.cost) {
-  if (championOfTheDay.cost > guessedChampion.cost) {
-    comparison.costHint = "up";
-  } else if (championOfTheDay.cost < guessedChampion.cost) {
-    comparison.costHint = "down";
-  } else {
-    comparison.costHint = "equal";
-  }
+if (championOfTheDay.cost > guessedChampion.cost) {
+  comparison.costHint = "up";
+} else if (championOfTheDay.cost < guessedChampion.cost) {
+  comparison.costHint = "down";
+} else {
+  comparison.costHint = "equal";
 }
 
-if (!comparison.cp) {
-  if (championOfTheDay.cp > guessedChampion.cp) {
-    comparison.cpHint = "up";
-  } else if (championOfTheDay.cp < guessedChampion.cp) {
-    comparison.cpHint = "down";
-  } else {
-    comparison.cpHint = "equal";
-  }
+if (championOfTheDay.cp > guessedChampion.cp) {
+  comparison.cpHint = "up";
+} else if (championOfTheDay.cp < guessedChampion.cp) {
+  comparison.cpHint = "down";
+} else {
+  comparison.cpHint = "equal";
 }
-
   res.json(comparison);
 });
 
