@@ -72,10 +72,9 @@ const comparison = {
 
   //Podpowiedź czy więcej czy mniej
 if (!comparison.cost) {
-  comparison.costHint = championOfTheDay.cost > guessedChampion.cost ? "up" : "down";
-}
-if (!comparison.cp) {
-  comparison.cpHint = championOfTheDay.cp > guessedChampion.cp ? "up" : "down";
+  if (championOfTheDay.cost > guessedChampion.cost) comparison.costHint = "up";
+  else if (championOfTheDay.cost < guessedChampion.cost) comparison.costHint = "down";
+  else comparison.costHint = "equal"; // Na wypadek remisu (opcjonalnie)
 }
   res.json(comparison);
 });

@@ -71,6 +71,7 @@ async function submitGuess() {
   const row = document.createElement("tr");
 function arrowIcon(direction) {
   if (direction === "up") return '🔼';
+  if (direction === "up") return '➖';
   if (direction === "down") return '🔽';
   return '';
 }
