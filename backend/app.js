@@ -72,10 +72,25 @@ const comparison = {
 
   //Podpowiedź czy więcej czy mniej
 if (!comparison.cost) {
-  if (championOfTheDay.cost > guessedChampion.cost) comparison.costHint = "up";
-  else if (championOfTheDay.cost < guessedChampion.cost) comparison.costHint = "down";
-  else comparison.costHint = "equal"; // Na wypadek remisu (opcjonalnie)
+  if (championOfTheDay.cost > guessedChampion.cost) {
+    comparison.costHint = "up";
+  } else if (championOfTheDay.cost < guessedChampion.cost) {
+    comparison.costHint = "down";
+  } else {
+    comparison.costHint = "equal";
+  }
 }
+
+if (!comparison.cp) {
+  if (championOfTheDay.cp > guessedChampion.cp) {
+    comparison.cpHint = "up";
+  } else if (championOfTheDay.cp < guessedChampion.cp) {
+    comparison.cpHint = "down";
+  } else {
+    comparison.cpHint = "equal";
+  }
+}
+
   res.json(comparison);
 });
 
@@ -91,5 +106,4 @@ app.get('/*splat', (req, res) => {
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
-
 
