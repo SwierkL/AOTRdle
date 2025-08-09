@@ -11,7 +11,7 @@ let guessedChampions = [];
 let totalAttempts = 0;
 let hasWon = false;
 
-fetch('http://localhost:3000/champions')
+fetch('/champions')
   .then(res => res.json())
   .then(data => championNames = data)
   .catch(err => console.error("Błąd pobierania championów:", err));
@@ -54,7 +54,7 @@ async function submitGuess() {
   const guess = inputElement.value.trim();
   if (!guess) return;
 
-  const response = await fetch('http://localhost:3000/guess', {
+  const response = await fetch('/guess', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ name: guess })
