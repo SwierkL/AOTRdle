@@ -190,5 +190,229 @@
     "faction": "Dol Guldur",
     "cost": 1000,
     "cp": 45
+  },   
+    {
+    "name": "Erebor Warriors",
+    "race": "Dwarf",
+    "type": "Swordsmen",
+    "faction": "Erebor",
+    "cost": 300,
+    "cp": 60
+  },   
+    {
+    "name": "Erebor Pikemen",
+    "race": "Dwarf",
+    "type": "Pikemen",
+    "faction": "Erebor",
+    "cost": 300,
+    "cp": 60
+  },   
+    {
+    "name": "Erebor Archers",
+    "race": "Dwarf",
+    "type": "Archers",
+    "faction": "Erebor",
+    "cost": 300,
+    "cp": 60
+  },   
+    {
+    "name": "Erebor Grim Hammers",
+    "race": "Dwarf",
+    "type": "Swordsmen",
+    "faction": "Erebor",
+    "cost": 250,
+    "cp": 60
+  },   
+    {
+    "name": "Ered Luin Traders",
+    "race": "Dwarf",
+    "type": "Special",
+    "faction": "Erebor",
+    "cost": 400,
+    "cp": 40
+  },   
+    {
+    "name": "Lake Town Watchmen",
+    "race": "Men",
+    "type": "Pikemen",
+    "faction": "Erebor",
+    "cost": 275,
+    "cp": 60
+  },   
+    {
+    "name": "Lake Town Bowmen",
+    "race": "Men",
+    "type": "Archers",
+    "faction": "Erebor",
+    "cost": 300,
+    "cp": 60
+  },   
+    {
+    "name": "Guards of the Master",
+    "race": "Men",
+    "type": "Swordsmen",
+    "faction": "Erebor",
+    "cost": 500,
+    "cp": 70
+  },   
+    {
+    "name": "Ered Luin Rangers",
+    "race": "Dwarf",
+    "type": "Swordsmen",
+    "faction": "Erebor",
+    "cost": 450,
+    "cp": 60
+  },   
+    {
+    "name": "Iron Hills Warriors",
+    "race": "Dwarf",
+    "type": "Special",
+    "faction": "Erebor",
+    "cost": 700,
+    "cp": 90
+  },   
+    {
+    "name": "Iron Hills Crossbowmen",
+    "race": "Dwarf",
+    "type": "Archers",
+    "faction": "Erebor",
+    "cost": 650,
+    "cp": 60
+  },   
+    {
+    "name": "Erebor Vault Wardens",
+    "race": "Dwarf",
+    "type": "Special",
+    "faction": "Erebor",
+    "cost": 500,
+    "cp": 80
+  },   
+    {
+    "name": "Wyrm-slayers",
+    "race": "Dwarf",
+    "type": "Swordsmen",
+    "faction": "Erebor",
+    "cost": 700,
+    "cp": 88
+  },   
+    {
+    "name": "Khazâd-uzbadul",
+    "race": "Dwarf",
+    "type": "Heroic",
+    "faction": "Erebor",
+    "cost": 1000,
+    "cp": 88
+  },   
+    {
+    "name": "Battering Ram",
+    "race": "Dwarf",
+    "type": "Siege",
+    "faction": "Erebor",
+    "cost": 300,
+    "cp": 40
+  },   
+    {
+    "name": "Battlewagon",
+    "race": "Dwarf",
+    "type": "Cavalry",
+    "faction": "Erebor",
+    "cost": 500,
+    "cp": 60
+  },   
+    {
+    "name": "Dwarven Mangonel",
+    "race": "Dwarf",
+    "type": "Siege",
+    "faction": "Erebor",
+    "cost": 700,
+    "cp": 30
+  },   
+    {
+    "name": "Iron Hills Demolisher",
+    "race": "Dwarf",
+    "type": "Siege",
+    "faction": "Erebor",
+    "cost": 600,
+    "cp": 40
+  },   
+    {
+    "name": "Roäc",
+    "race": "Raven",
+    "type": "Hero",
+    "faction": "Erebor",
+    "cost": 500,
+    "cp": 0
+  },   
+    {
+    "name": "Master of Lake-town",
+    "race": "Men",
+    "type": "Hero",
+    "faction": "Erebor",
+    "cost": 1100,
+    "cp": 0
+  },   
+    {
+    "name": "Kíli",
+    "race": "Dwarf",
+    "type": "Hero",
+    "faction": "Erebor",
+    "cost": 1200,
+    "cp": 0
+  },   
+    {
+    "name": "Fíli",
+    "race": "Dwarf",
+    "type": "Hero",
+    "faction": "Erebor",
+    "cost": 1500,
+    "cp": 0
+  },   
+    {
+    "name": "Balin",
+    "race": "Men",
+    "type": "Hero",
+    "faction": "Erebor",
+    "cost": 1600,
+    "cp": 0
+  },   
+    {
+    "name": "Bard the Bowman",
+    "race": "Men",
+    "type": "Hero",
+    "faction": "Erebor",
+    "cost": 1800,
+    "cp": 0
+  },   
+    {
+    "name": "Dwalin",
+    "race": "Dwarf",
+    "type": "Hero",
+    "faction": "Erebor",
+    "cost": 2500,
+    "cp": 0
+  },   
+    {
+    "name": "Dáin Ironfoot",
+    "race": "Dwarf",
+    "type": "Hero",
+    "faction": "Erebor",
+    "cost": 2500,
+    "cp": 0
+  },   
+    {
+    "name": "Thorin Oakenshield",
+    "race": "Dwarf",
+    "type": "Hero",
+    "faction": "Erebor",
+    "cost": 3500,
+    "cp": 0
+  },   
+    {
+    "name": "Durin the Deathless",
+    "race": "Dwarf",
+    "type": "Hero",
+    "faction": "Erebor",
+    "cost": 0,
+    "cp": 0
   }
 ]
