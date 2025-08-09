@@ -113,13 +113,13 @@ if (allCorrect) {
   hasWon = true;
   statusElem.textContent = `🎉 Well done! You guessed it after ${totalAttempts} attempts.`;
   showFireworks();
+  startCountdownToMidnight();
 
-    // Zablokuj input i przycisk po zwycięstwie
   inputElement.disabled = true;
   const guessButton = document.querySelector('button[onclick="submitGuess()"]');
   if (guessButton) guessButton.disabled = true;
 
-  // Możesz też zmienić placeholder inputu, żeby było bardziej czytelnie
+
   inputElement.placeholder = "✅ You guessed correctly!";
 } else {
   statusElem.textContent = `You haven't guessed yet!`;
@@ -146,7 +146,7 @@ function showFireworks() {
     const angle = Math.random() * 2 * Math.PI;
     const distance = 100 + Math.random() * 100;
 
-    // Ustaw zmienne CSS --dx i --dy, żeby animacja mogła z nich korzystać
+
     const dx = Math.cos(angle) * distance + 'px';
     const dy = Math.sin(angle) * distance + 'px';
     particle.style.setProperty('--dx', dx);
@@ -154,12 +154,12 @@ function showFireworks() {
 
     container.appendChild(particle);
 
-    // Po 50ms * i uruchamiamy animację (żeby cząstki startowały lekko falowo)
+    // Po 50ms * i uruchomienie animacji (żeby cząstki startowały lekko falowo)
     setTimeout(() => {
       particle.style.animationPlayState = 'running';
     }, 50 * i);
 
-    // Usuwamy element po zakończeniu animacji
+    // Usuwanie elementu po zakończeniu animacji
     particle.addEventListener('animationend', () => {
       particle.remove();
       if (container.children.length === 0) {
@@ -168,6 +168,35 @@ function showFireworks() {
     });
   }
 }
+//Timer do nowego dnia
+function startCountdownToMidnight() {
+  const timerContainer = document.getElementById("nextUnitTimer");
+  const countdownElem = document.getElementById("countdown");
+  timerContainer.style.display = "block";
+
+  function updateCountdown() {
+    const now = new Date();
+    const midnight = new Date();
+    midnight.setHours(24, 0, 0, 0); 
+
+    const diff = midnight - now;
+    if (diff <= 0) {
+      countdownElem.textContent = "00:00:00";
+      clearInterval(intervalId);
+      return;
+    }
+
+    const hours = String(Math.floor(diff / 1000 / 60 / 60)).padStart(2, '0');
+    const minutes = String(Math.floor((diff / 1000 / 60) % 60)).padStart(2, '0');
+    const seconds = String(Math.floor((diff / 1000) % 60)).padStart(2, '0');
+
+    countdownElem.textContent = `${hours}:${minutes}:${seconds}`;
+  }
+
+  updateCountdown(); // Wywołanie od razu
+  const intervalId = setInterval(updateCountdown, 1000);
+}
+
 
 
 // ./backend/ ----  node app.js <--start
