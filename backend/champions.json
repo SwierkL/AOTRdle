@@ -298,7 +298,7 @@
     {
     "name": "Khazâd-uzbadul",
     "race": "Dwarf",
-    "type": "Heroic",
+    "type": "Swordsmen",
     "faction": "Erebor",
     "cost": 1000,
     "cp": 88
@@ -334,7 +334,15 @@
     "faction": "Erebor",
     "cost": 600,
     "cp": 40
-  },   
+  }, 
+    {
+    "name": "Custodians of Durin",
+    "race": "Dwarf",
+    "type": "Heroic",
+    "faction": "Erebor",
+    "cost": 0,
+    "cp": 0
+  },  
     {
     "name": "Roäc",
     "race": "Raven",
